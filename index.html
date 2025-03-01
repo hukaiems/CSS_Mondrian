@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    html{
+      height: 100vh;
+    }
+
+    body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container{
+      display: grid;
+      gap: 9px;
+      background-color: #232629;
+      grid-template: 414px 1fr 20px/ 320px 1fr 50px;
+      height: 748px;
+      width: 748px;
+      justify-content: center;
+    }
+    .inside{
+      background-color: #F0F1EC;
+    }
+    .red{
+      background-color: #E72F24;
+    }
+
+    .second{
+      grid-column: span 2;
+    }
+
+    .blue{
+      grid-row: span 2;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #232629;
+    }
+
+    .blue_colour{
+      background-color: #004592;
+      height: 130px;
+    }
+
+    .blue_empty{
+      background-color: #F0F1EC;
+      height: 100%;
+    }
+
+    .last{
+      display: flex;
+      background-color: #232629;
+    }
+
+    .yellow{
+      width: 198px;
+      background-color: #F9D01E;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+   <div class="container">   
+    <div class="inside red"></div>
+    <div class="inside second"></div>
+    <div class="inside"></div>
+    <div class="inside"></div>
+    <div class="inside blue">
+      <div class="blue_colour"></div>
+      <div class="blue_empty"></div>
+    </div>
+    <div class="inside"></div>
+    <div class="inside last">
+      <div class="yellow"></div>
+      <div class="black"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
